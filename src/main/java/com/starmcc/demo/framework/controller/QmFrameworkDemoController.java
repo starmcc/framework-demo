@@ -18,14 +18,14 @@ import java.util.Map;
 public class QmFrameworkDemoController extends QmController {
 
     /**
-     * 获取学生列表
+     * get 接收参数示例 使用requestParam传参
      *
      * @param name
      * @return
      */
     @GetMapping("/get_request")
     @ResponseBody
-    public String getRequest(@RequestParam Integer page,@RequestParam Integer size) {
+    public String getRequest(@RequestParam Integer page, @RequestParam Integer size) {
         Map<String, Object> params = new HashMap<>(16);
         params.put("page", page);
         params.put("size", size);
@@ -34,14 +34,14 @@ public class QmFrameworkDemoController extends QmController {
 
 
     /**
-     * 获取学生列表
+     * POST 接收参数示例 使用body传参
      *
      * @param name
      * @return
      */
-    @PostMapping("/get_request")
+    @PostMapping("/post_request")
     @ResponseBody
-    public String getRequestPost(@QmBody Integer page,@QmBody Integer size) {
+    public String postRequest(@QmBody Integer page, @QmBody Integer size) {
         Map<String, Object> params = new HashMap<>(16);
         params.put("page", page);
         params.put("size", size);

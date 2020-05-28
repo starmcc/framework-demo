@@ -11,7 +11,29 @@ import java.util.List;
  */
 public interface DemoService {
 
-
+    /**
+     * 查询list
+     *
+     * @param student
+     * @return
+     */
     List<Student> getList(Student student);
+
+    /***
+     * 查询单个对象
+     *
+     * @param student
+     * @return
+     */
+    Student get(Student student);
+
+
+    /**
+     * 通过Dao - Mapper进行查询
+     *
+     * @param age
+     * @return
+     */
+    List<Student> getCustomList(Integer age);
 
 }

@@ -13,7 +13,7 @@ qmframework:
 
 mybatis:
   # 指定实体类包路径
-  type-aliases-package: com.starmcc.demo.framework
+  type-aliases-package: com.starmcc.demo.framework.entity
   # 指定QmData基础Maapper路径
   # 框架内部的Mapper文件存放路径：classpath:com/starmcc/qmdata/mapper/*.xml
   # 建议使用classpath*:**/*Mapper.xml
