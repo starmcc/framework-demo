@@ -1,7 +1,9 @@
 package com.starmcc.demo.framework;
 
+import com.starmcc.qmframework.aop.QmControllerAgentAgency;
 import com.starmcc.qmframework.config.QmFrameworkApplication;
 import com.starmcc.qmframework.exception.QmExceptionHandler;
+import com.starmcc.qmframework.redis.QmRedisConfig;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +19,8 @@ import org.springframework.context.annotation.Import;
 @Import({
         QmFrameworkApplication.class,
         QmExceptionHandler.class,
+        QmControllerAgentAgency.class,
+//        QmRedisConfig.class,
 })
 @MapperScan("com.starmcc.demo.framework.dao")
 public class FrameworkApplication {
